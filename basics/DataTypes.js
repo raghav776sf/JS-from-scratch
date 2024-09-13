@@ -12,10 +12,12 @@ let isLoggedIn = false
 let state;
 let name = "Anurag"
 let data = null;
+let id = undefined
 
 console.log(typeof name)
 console.log(typeof state)
 console.log(typeof isLoggedIn)
 console.log(typeof data)
 console.log(typeof age)
+console.log(typeof id)
 // null is object
