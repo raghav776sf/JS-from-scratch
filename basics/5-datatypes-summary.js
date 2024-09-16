@@ -1,6 +1,6 @@
 // how we are putting data into memory and how we can access stored data from memory data-types are divided into two parts
 
-//  Primitive : call by value
+//  Primitive : call by value {copy}
 
 //  7 types : String, Number, Boolean, null, undefined, Symbol, BigInt
 
@@ -36,3 +36,26 @@ const myFunction = function(){
 
 console.log(typeof heros);
 
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Primitive)  ||  Heap(Non-Primitive)
+
+let myName = "Anurag";
+let myFullName = myName
+myFullName = "Kesarwani Anurag"
+
+// console.log(myName)
+// console.log(myFullName)
+
+let myJio = {
+    id: 12121,
+    name: "Jio",
+    number: 987650
+}
+
+
+let myAirtel = myJio
+myJio.id = 11;
+
+console.log(myAirtel.id)
+console.log(myJio.id)
