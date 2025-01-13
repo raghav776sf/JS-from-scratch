@@ -7,6 +7,7 @@ city = "NDLS";
 emailId = "qwer.com"
 phoneNum = 10000;
 city = "PRYJ"
+let countryId;
+// prefer not to use var, due to issue in block & functional scope
 
-
-console.table([uniqueId, emailId, phoneNum, city]);
+console.table([uniqueId, emailId, phoneNum, city, countryId]);
