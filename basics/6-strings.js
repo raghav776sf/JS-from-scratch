@@ -1,11 +1,11 @@
 const myName = "Raghav"
 const age = 27
 
-console.log(`Hello, My name is ${myName} and I am ${age} years old`);
+console.log(`Hello, My name is ${myName} and I am ${age} years old.`);
 // the above is known as String interpolation
 
 const favSports = new String('  Badminton ')
-console.log(favSports[6])
+console.log(favSports.length)
 // console.log(favSports.toUpperCase())
 // console.log(favSports)
 // console.log(favSports.indexOf("t"));
@@ -14,7 +14,7 @@ console.log(favSports[6])
 // console.log(favSports.slice(3,8))
 
 const test = favSports.trim()
-// console.log(test);
+ console.log(test);
 
 const url = "https://google%20JS.com"
 // console.log(url.replace("%20", "-"));

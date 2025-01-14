@@ -34,12 +34,12 @@ const myFunction = function(){
     console.log("Hello world");
 }
 
-console.log(typeof heros);
+// console.log(typeof myFunction);
 
 //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Stack(Primitive)  ||  Heap(Non-Primitive)
-
+// in stack we will get copy & in heap we will get reference
 let myName = "Anurag";
 let myFullName = myName
 myFullName = "Kesarwani Anurag"
@@ -48,14 +48,14 @@ myFullName = "Kesarwani Anurag"
 // console.log(myFullName)
 
 let myJio = {
-    id: 12121,
+    id: 8383,
     name: "Jio",
     number: 987650
 }
 
 
 let myAirtel = myJio
-myJio.id = 11;
+// myJio.id = 7525;
 
 console.log(myAirtel.id)
 console.log(myJio.id)
