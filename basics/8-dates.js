@@ -10,4 +10,12 @@ const myDate = new Date();
 // console.log(myDate.toLocaleTimeString())
 
 const customizeDate = new Date(1997, 8, 20);
-console.log(customizeDate.toDateString());
+// console.log(customizeDate.toDateString());
+
+ const mycreatedDate = new Date("1997-08-20");
+
+
+let myTimeStamp = Date.now()
+console.log(myTimeStamp)
+console.log(mycreatedDate.getTime())
+console.log(Math.floor(Date.now()/1000))
