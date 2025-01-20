@@ -70,8 +70,17 @@ const obj2 = { 4: 'bbb', 5: 'mmm'}
 const newObj = {...obj1, ...obj2}
 // console.log(newObj)
 
-console.log(user)
-console.log(Object.keys(user))
-console.log(Object.values(user))
-console.log(Object.entries(user))
-console.log(user.hasOwnProperty('email'))
+// console.log(user)
+// console.log(Object.keys(user))
+// console.log(Object.values(user))
+// console.log(Object.entries(user))
+// console.log(user.hasOwnProperty('email'))
+
+const techUI = {
+    name: "react",
+    developedBy: "fb"
+}
+
+// const {developedBy} = techUI
+const {developedBy: author} = techUI
+console.log(author)
