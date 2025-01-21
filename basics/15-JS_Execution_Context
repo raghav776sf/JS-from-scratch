@@ -1,0 +1,39 @@
+// JavaScript Execution Context (Js is single thread)
+
+// browser and node.js execution are different. (each env has different Execution-Context)
+
+//  {#code} -> global EC -> this
+//      |->  Global EC
+//      |->  Functional EC
+
+// {#code}
+//      |->  Memory creation phase
+//      |->  Execution phase
+
+let val1 = 100
+let val2 = 20
+function addTwo(num1, num2){
+    let total = num1+num2
+    return total
+}
+let result1 = addTwo(val1, val2)
+let result2 = addTwo(18, 7)
+
+// how the above code will execute will explain below step by step
+1. Global Execution -> this
+2. Memory phase -> val1 = undefined; val2 = undefined; addTwo = defination; result1 = undefined; result2=undefined; {also called first-cycle}
+
+3. Execution phase -> val1 = 100; val2=20; {function allready defined} 
+at line no 19: addTwo=> will create seprate context/Execution context as=> {new variable env + Execution thread}
+for each function they will again do Memory & execution phase at seprate context/Execution context
+i) Memory phase(we have to do with function defination) -> val1=undefined; val2=undefined; total=undefined; 
+ii) Execution phase -> val1=100; val2=20; total=120;
+*{in function return basicaly returning value into Global context}
+* after both phase the seprate context/Execution context(for function) will delete also after execution phase get the value of that function
+
+3. Execution phase -> val1 = 100; val2=20; result1 = 120;
+
+// Call-Stack
+
+* In call-stack firstly Global-Execution will happend then function will in and out one by one
+* if function have nested function's then LiFo concept comes into the pitcure which stands for: Last-in-First-out.
